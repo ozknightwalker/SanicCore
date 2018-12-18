@@ -5,15 +5,14 @@ from sanic.views import HTTPMethodView
 
 from .template import template_env
 from .exceptions import ImproperlyConfigured
+from .decorators import view_method_allowed
 
 
 class View(HTTPMethodView):
     methods = ()
 
+    @view_method_allowed()
     def dispatch_request(self, request):
-        if request.method.lower() not in self.methods:
-            # TODO handle to raise exception when method is not allowed
-            pass
         return super().dispatch_request(request)
 
     async def get(self, request):
