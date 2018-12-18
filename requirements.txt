@@ -4,6 +4,7 @@ async-timeout==3.0.1
 atomicwrites==1.2.1
 attrs==18.2.0
 chardet==3.0.4
+coverage==4.5.2
 httptools==0.0.11
 idna==2.8
 idna-ssl==1.1.0
@@ -14,6 +15,7 @@ multidict==4.5.2
 pluggy==0.8.0
 py==1.7.0
 pytest==4.0.2
+pytest-cov==2.6.0
 sanic==0.8.3
 six==1.12.0
 ujson==1.35
