@@ -2,8 +2,13 @@ language: python
 python:
   - "3.6"
 
+sudo: false
+
 install:
-  - pip install -r requirements.txt --no-cache-dir
+  - pip install -r requirements.txt --no-cache-dir codecov
 
 script:
-  - pytest
+  - pytest --cov
+
+after_success:
+  - codecov
